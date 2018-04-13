@@ -63,7 +63,7 @@ var OracleTest = new web3.eth.Contract(
       type: 'function'
     }
   ],
-  '0x27526290ab272fb2130a61e399bd9dd6515ac75a'
+  '0x3fcb8f8b945e5af95331964e783ac310aac69cfb'
 );
 OracleTest.methods
   .addresses(0)
@@ -71,3 +71,8 @@ OracleTest.methods
   .then((address) => {
     console.log(`There is an address: ${address}`);
   });
+ 
+  OracleTest.methods
+  .PopMessage("0x4087766079623261174ADBFe5913Ca7E031a28Fb")
+  .call()
+  .then(console.log);
